@@ -1,0 +1,10 @@
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\bin\Debug\EnviromentSummary.exe.config
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\bin\Debug\EnviromentSummary.exe
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\bin\Debug\EnviromentSummary.pdb
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.csprojResolveAssemblyReference.cache
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.Properties.Resources.resources
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.csproj.GenerateResource.Cache
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.exe
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.pdb
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.WindowsAndPCDetail.resources
+E:\Programming-Web-DB\DotNet\WinFormsDemo\EnviromentSummary\obj\Debug\EnviromentSummary.FolderAndDrivesDetail.resources

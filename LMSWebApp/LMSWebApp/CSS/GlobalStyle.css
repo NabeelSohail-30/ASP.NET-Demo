@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+table {
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    width: 95%;
+}
+
+.grid {
+    margin: 40px 10px;
+}
+
+.action {
+    background-color: #5570b4;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 28px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.search-btn {
+    background-color: #142e84;
+    padding: 10px 22px;
+    font-size: 16px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.add-new {
+    background-color: #162b6f;
+    padding: 10px 22px;
+    font-size: 22px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.add-new:hover {
+    background-color: #142e84;
+    padding: 10px 22px;
+    font-size: 22px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.panel-head {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #5570b4;
+    color: white;
+    padding-top: 10px;
+    margin-bottom:20px;
+}
+
+.input-heading {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button {
+    width: 30%;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    background-color: #5570b4;
+    color: white;
+    font-size: 18px;
+    border-radius: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    transition: ease-in-out;
+    background-color: #142e84;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 50%;
+    height: max-content;
+    background-color: whitesmoke;
+    color: black;
+    margin: 90px auto;
+}
+
+.page-bar {
+    text-align: center;
+    margin: auto;
+    margin: 18px auto;
+}
+
+.page-nav a {
+    background-color: whitesmoke;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 12px;
+    color: black;
+    font-weight: 500;
+}
+
+.page-nav a:hover {
+    background-color: blue;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 12px;
+    color: whitesmoke;
+    font-weight: 500;
+    text-decoration: none;
+}

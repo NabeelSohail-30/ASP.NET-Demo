@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS", "LMS\LMS.csproj", "{D6854025-BE6E-492C-BB4C-273CF3BFCD0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMSWebApp", "LMSWebApp\LMSWebApp.csproj", "{EB60C712-DD17-46C8-89A6-48A3B512FFC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMSWin", "LMSWin\LMSWin.csproj", "{483E6DFC-1A2A-470C-A522-3CB7903FAC80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6854025-BE6E-492C-BB4C-273CF3BFCD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6854025-BE6E-492C-BB4C-273CF3BFCD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6854025-BE6E-492C-BB4C-273CF3BFCD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6854025-BE6E-492C-BB4C-273CF3BFCD0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB60C712-DD17-46C8-89A6-48A3B512FFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB60C712-DD17-46C8-89A6-48A3B512FFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB60C712-DD17-46C8-89A6-48A3B512FFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB60C712-DD17-46C8-89A6-48A3B512FFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{483E6DFC-1A2A-470C-A522-3CB7903FAC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483E6DFC-1A2A-470C-A522-3CB7903FAC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483E6DFC-1A2A-470C-A522-3CB7903FAC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483E6DFC-1A2A-470C-A522-3CB7903FAC80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

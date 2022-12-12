@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Images/Ads/1.jpg</ImageUrl>
+    <NavigateUrl>https://www.youtube.com/</NavigateUrl>
+    <AlternateText>Youtube.com</AlternateText>
+    <Keyword>Google</Keyword>
+    <Impressions>10</Impressions>
+  </Ad>
+
+<Ad>
+    <ImageUrl>~/Images/Ads/2.png</ImageUrl>
+    <NavigateUrl>https://www.ssuet.edu.pk/</NavigateUrl>
+    <AlternateText>SSUET</AlternateText>
+    <Keyword>Education</Keyword>
+    <Impressions>40</Impressions>
+  </Ad>
+
+<Ad>
+    <ImageUrl>~/Images/Ads/3.jpg</ImageUrl>
+    <NavigateUrl>https://getintopc.com/</NavigateUrl>
+    <AlternateText>Get Into PC</AlternateText>
+    <Keyword>Softwares</Keyword>
+    <Impressions>15</Impressions>
+  </Ad>
+
+<Ad>
+    <ImageUrl>~/Images/Ads/4.jpg</ImageUrl>
+    <NavigateUrl>https://www.google.com/</NavigateUrl>
+    <AlternateText>Google</AlternateText>
+    <Keyword>Google</Keyword>
+    <Impressions>20</Impressions>
+  </Ad>
+
+<Ad>
+    <ImageUrl>~/Images/Ads/5.jpg</ImageUrl>
+    <NavigateUrl>https://www.w3schools.com/</NavigateUrl>
+    <AlternateText>W3 School</AlternateText>
+    <Keyword>Education</Keyword>
+    <Impressions>25</Impressions>
+  </Ad>
+
+<Ad>
+    <ImageUrl>~/Images/Ads/6.jpg</ImageUrl>
+    <NavigateUrl>https://www.facebook.com/</NavigateUrl>
+    <AlternateText>Facebook</AlternateText>
+    <Keyword>Social Media</Keyword>
+    <Impressions>30</Impressions>
+  </Ad>
+
+<Ad>
+    <ImageUrl>~/Images/Ads/7.jpg</ImageUrl>
+    <NavigateUrl>https://github.com/</NavigateUrl>
+    <AlternateText>Github</AlternateText>
+    <Keyword>Education</Keyword>
+    <Impressions>35</Impressions>
+  </Ad>
+</Advertisements>

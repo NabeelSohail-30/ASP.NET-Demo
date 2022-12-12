@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="C36_PageParent.master.cs" Inherits="CsharpWebAppDemo.C36_PageParent" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%; border: solid red 2px">
+                <tr style="background-color: aqua">
+                    <td colspan="2">
+                        <h1>This is my Header</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%" style="background-color: cadetblue">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </td>
+                    <td width="75%">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr style="background-color: burlywood">
+                    <td colspan="2">
+                        <h3>This is my Footer</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

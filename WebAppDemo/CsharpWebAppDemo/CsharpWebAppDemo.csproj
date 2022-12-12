@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1083355C-A843-4BB8-9B43-3B928B7D098A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsharpWebAppDemo</RootNamespace>
+    <AssemblyName>CsharpWebAppDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C01StatelessProtocol.aspx" />
+    <Content Include="C02WebAppLifeCycleEvents.aspx" />
+    <Content Include="C03StateTypes.aspx" />
+    <Content Include="C03StateTypes_Session.aspx" />
+    <Content Include="C04TextBox.aspx" />
+    <Content Include="C05DropDown.aspx" />
+    <Content Include="C06CheckBox.aspx" />
+    <Content Include="C07RadioBtn.aspx" />
+    <Content Include="C08ListBox.aspx" />
+    <Content Include="C09DropDownRunTimeVal.aspx" />
+    <Content Include="C10HyperLink.aspx" />
+    <Content Include="C10_CalanderControl.aspx" />
+    <Content Include="C11Buttons.aspx" />
+    <Content Include="C12Table_Img.aspx" />
+    <Content Include="C13ButtonsCmdEvent.aspx" />
+    <Content Include="C14_FooterControl.ascx" />
+    <Content Include="C14_HeaderControl.ascx" />
+    <Content Include="C14_MainFile.aspx" />
+    <Content Include="C15_BulletedList.aspx" />
+    <Content Include="C16_ServerMapPath.aspx" />
+    <Content Include="C17_FileUpload.aspx" />
+    <Content Include="C18_AdRotatorDB.aspx" />
+    <Content Include="C18_AdRotatorXML.aspx" />
+    <Content Include="C20_HiddenField.aspx" />
+    <Content Include="C21_MultiView.aspx" />
+    <Content Include="C22_WizardControl.aspx" />
+    <Content Include="C23_Dynamic Control.aspx" />
+    <Content Include="C24_ValidationControl.aspx" />
+    <Content Include="C25_RangeValidator.aspx" />
+    <Content Include="C26_CompareValidator.aspx" />
+    <Content Include="C27_RegExpValidator.aspx" />
+    <Content Include="C28_CustomVal.aspx" />
+    <Content Include="C29_ValSummary.aspx" />
+    <Content Include="C30_ValidationGrp.aspx" />
+    <Content Include="C31_ServerTransfer.aspx" />
+    <Content Include="C31_ServerTransfer_2.aspx" />
+    <Content Include="C32_QueryStr.aspx" />
+    <Content Include="C32_QueryStr2.aspx" />
+    <Content Include="C33_CookieRead.aspx" />
+    <Content Include="C33_CookieRead2.aspx" />
+    <Content Include="C33_Cookies.aspx" />
+    <Content Include="C34_SessionRead.aspx" />
+    <Content Include="C34_SessionState.aspx" />
+    <Content Include="C35_ApplicationState.aspx" />
+    <Content Include="C35_ApplicationStateRead.aspx" />
+    <Content Include="C36_MasterPageLayout.html" />
+    <Content Include="Database\Db01.aspx" />
+    <Content Include="Database\Db02.aspx" />
+    <Content Include="Database\Db03.aspx" />
+    <Content Include="Database\Db04.aspx" />
+    <Content Include="Database\Db05.aspx" />
+    <Content Include="Database\Db06-Add.aspx" />
+    <Content Include="Database\Db06-Edit.aspx" />
+    <Content Include="Database\Db07.aspx" />
+    <Content Include="Database\Db08_Disconnected.aspx" />
+    <Content Include="Database\Db09_Disconnected.aspx" />
+    <Content Include="Database\Db10_Disconnected.aspx" />
+    <Content Include="Database\Db11.aspx" />
+    <Content Include="Database\Db11_CacheDS.aspx" />
+    <Content Include="Database\Db12_SqlInjection.aspx" />
+    <Content Include="Database\Db13_ReadFromXML.aspx" />
+    <Content Include="Database\LoginForm\AddLogin.aspx" />
+    <Content Include="Database\LoginForm\css\bootstrap.css" />
+    <Content Include="Database\LoginForm\css\StyleLogin.css" />
+    <Content Include="Database\LoginForm\Img\Avatar.png" />
+    <Content Include="Database\LoginForm\Logged.aspx" />
+    <Content Include="Database\LoginForm\LoginForm.aspx" />
+    <Content Include="Database\StoredProcedureDemo\LoginInsert.aspx" />
+    <Content Include="Database\StoredProcedureDemo\LoginView.aspx" />
+    <Content Include="DataGrid\WebForm1.aspx" />
+    <Content Include="DataGrid\WebForm10.aspx" />
+    <Content Include="DataGrid\WebForm11.aspx" />
+    <Content Include="DataGrid\WebForm12.aspx" />
+    <Content Include="DataGrid\WebForm13.aspx" />
+    <Content Include="DataGrid\WebForm14.aspx" />
+    <Content Include="DataGrid\WebForm15.aspx" />
+    <Content Include="DataGrid\WebForm16.aspx" />
+    <Content Include="DataGrid\WebForm17.aspx" />
+    <Content Include="DataGrid\WebForm18.aspx" />
+    <Content Include="DataGrid\WebForm19.aspx" />
+    <Content Include="DataGrid\WebForm2.aspx" />
+    <Content Include="DataGrid\WebForm20.aspx" />
+    <Content Include="DataGrid\WebForm21.aspx" />
+    <Content Include="DataGrid\WebForm22.aspx" />
+    <Content Include="DataGrid\WebForm23.aspx" />
+    <Content Include="DataGrid\WebForm24.aspx" />
+    <Content Include="DataGrid\WebForm25.aspx" />
+    <Content Include="DataGrid\WebForm26.aspx" />
+    <Content Include="DataGrid\WebForm27.aspx" />
+    <Content Include="DataGrid\WebForm3.aspx" />
+    <Content Include="DataGrid\WebForm4.aspx" />
+    <Content Include="DataGrid\WebForm5.aspx" />
+    <Content Include="DataGrid\WebForm6.aspx" />
+    <Content Include="DataGrid\WebForm7.aspx" />
+    <Content Include="DataGrid\WebForm8.aspx" />
+    <Content Include="DataGrid\WebForm9.aspx" />
+    <Content Include="Data\AdsData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\Author.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\Catalog.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Ads\1.jpg" />
+    <Content Include="Images\Ads\2.png" />
+    <Content Include="Images\Ads\3.jpg" />
+    <Content Include="Images\Ads\4.jpg" />
+    <Content Include="Images\Ads\5.jpg" />
+    <Content Include="Images\Ads\6.jpg" />
+    <Content Include="Images\Ads\7.jpg" />
+    <Content Include="Images\Author\p1.png" />
+    <Content Include="Images\Author\p2.jpg" />
+    <Content Include="Images\Author\p3.png" />
+    <Content Include="Images\Author\p4.jpg" />
+    <Content Include="Images\Author\p5.png" />
+    <Content Include="Images\Author\p6.png" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\CSharp.png" />
+    <Content Include="Images\down.png" />
+    <Content Include="Images\Google.png" />
+    <Content Include="Images\up.png" />
+    <Content Include="RegistrationForm01\CSS\bootstrap.css" />
+    <Content Include="RegistrationForm01\RegistrationForm.aspx" />
+    <Content Include="RegistrationForm02\CSS\bootstrap.css" />
+    <Content Include="RegistrationForm02\Index.aspx" />
+    <Content Include="RegistrationForm02\View.aspx" />
+    <None Include="scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="scripts\jquery-3.6.0.js" />
+    <Content Include="scripts\jquery-3.6.0.min.js" />
+    <Content Include="scripts\jquery-3.6.0.slim.js" />
+    <Content Include="scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="ServerMap\MapPath\ServerMapPath.aspx" />
+    <Content Include="SimpleCounter.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="C36_Site.Master" />
+    <Content Include="C36_Content01.aspx" />
+    <Content Include="C36_Content02.aspx" />
+    <Content Include="C36_PageParent.Master" />
+    <Content Include="scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="scripts\jquery-3.6.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C01StatelessProtocol.aspx.cs">
+      <DependentUpon>C01StatelessProtocol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C01StatelessProtocol.aspx.designer.cs">
+      <DependentUpon>C01StatelessProtocol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C02WebAppLifeCycleEvents.aspx.cs">
+      <DependentUpon>C02WebAppLifeCycleEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C02WebAppLifeCycleEvents.aspx.designer.cs">
+      <DependentUpon>C02WebAppLifeCycleEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C03StateTypes.aspx.cs">
+      <DependentUpon>C03StateTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C03StateTypes.aspx.designer.cs">
+      <DependentUpon>C03StateTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C03StateTypes_Session.aspx.cs">
+      <DependentUpon>C03StateTypes_Session.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C03StateTypes_Session.aspx.designer.cs">
+      <DependentUpon>C03StateTypes_Session.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C04TextBox.aspx.cs">
+      <DependentUpon>C04TextBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C04TextBox.aspx.designer.cs">
+      <DependentUpon>C04TextBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C05DropDown.aspx.cs">
+      <DependentUpon>C05DropDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C05DropDown.aspx.designer.cs">
+      <DependentUpon>C05DropDown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C06CheckBox.aspx.cs">
+      <DependentUpon>C06CheckBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C06CheckBox.aspx.designer.cs">
+      <DependentUpon>C06CheckBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C07RadioBtn.aspx.cs">
+      <DependentUpon>C07RadioBtn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C07RadioBtn.aspx.designer.cs">
+      <DependentUpon>C07RadioBtn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C08ListBox.aspx.cs">
+      <DependentUpon>C08ListBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C08ListBox.aspx.designer.cs">
+      <DependentUpon>C08ListBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C09DropDownRunTimeVal.aspx.cs">
+      <DependentUpon>C09DropDownRunTimeVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C09DropDownRunTimeVal.aspx.designer.cs">
+      <DependentUpon>C09DropDownRunTimeVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C10HyperLink.aspx.cs">
+      <DependentUpon>C10HyperLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C10HyperLink.aspx.designer.cs">
+      <DependentUpon>C10HyperLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C10_CalanderControl.aspx.cs">
+      <DependentUpon>C10_CalanderControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C10_CalanderControl.aspx.designer.cs">
+      <DependentUpon>C10_CalanderControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C11Buttons.aspx.cs">
+      <DependentUpon>C11Buttons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C11Buttons.aspx.designer.cs">
+      <DependentUpon>C11Buttons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C12Table_Img.aspx.cs">
+      <DependentUpon>C12Table_Img.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C12Table_Img.aspx.designer.cs">
+      <DependentUpon>C12Table_Img.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C13ButtonsCmdEvent.aspx.cs">
+      <DependentUpon>C13ButtonsCmdEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C13ButtonsCmdEvent.aspx.designer.cs">
+      <DependentUpon>C13ButtonsCmdEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C14_FooterControl.ascx.cs">
+      <DependentUpon>C14_FooterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C14_FooterControl.ascx.designer.cs">
+      <DependentUpon>C14_FooterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="C14_HeaderControl.ascx.cs">
+      <DependentUpon>C14_HeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C14_HeaderControl.ascx.designer.cs">
+      <DependentUpon>C14_HeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="C14_MainFile.aspx.cs">
+      <DependentUpon>C14_MainFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C14_MainFile.aspx.designer.cs">
+      <DependentUpon>C14_MainFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C15_BulletedList.aspx.cs">
+      <DependentUpon>C15_BulletedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C15_BulletedList.aspx.designer.cs">
+      <DependentUpon>C15_BulletedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C16_ServerMapPath.aspx.cs">
+      <DependentUpon>C16_ServerMapPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C16_ServerMapPath.aspx.designer.cs">
+      <DependentUpon>C16_ServerMapPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C17_FileUpload.aspx.cs">
+      <DependentUpon>C17_FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C17_FileUpload.aspx.designer.cs">
+      <DependentUpon>C17_FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C18_AdRotatorDB.aspx.cs">
+      <DependentUpon>C18_AdRotatorDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C18_AdRotatorDB.aspx.designer.cs">
+      <DependentUpon>C18_AdRotatorDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C18_AdRotatorXML.aspx.cs">
+      <DependentUpon>C18_AdRotatorXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C18_AdRotatorXML.aspx.designer.cs">
+      <DependentUpon>C18_AdRotatorXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C20_HiddenField.aspx.cs">
+      <DependentUpon>C20_HiddenField.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C20_HiddenField.aspx.designer.cs">
+      <DependentUpon>C20_HiddenField.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C21_MultiView.aspx.cs">
+      <DependentUpon>C21_MultiView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C21_MultiView.aspx.designer.cs">
+      <DependentUpon>C21_MultiView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C22_WizardControl.aspx.cs">
+      <DependentUpon>C22_WizardControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C22_WizardControl.aspx.designer.cs">
+      <DependentUpon>C22_WizardControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C23_Dynamic Control.aspx.cs">
+      <DependentUpon>C23_Dynamic Control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C23_Dynamic Control.aspx.designer.cs">
+      <DependentUpon>C23_Dynamic Control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C24_ValidationControl.aspx.cs">
+      <DependentUpon>C24_ValidationControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C24_ValidationControl.aspx.designer.cs">
+      <DependentUpon>C24_ValidationControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C25_RangeValidator.aspx.cs">
+      <DependentUpon>C25_RangeValidator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C25_RangeValidator.aspx.designer.cs">
+      <DependentUpon>C25_RangeValidator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C26_CompareValidator.aspx.cs">
+      <DependentUpon>C26_CompareValidator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C26_CompareValidator.aspx.designer.cs">
+      <DependentUpon>C26_CompareValidator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C27_RegExpValidator.aspx.cs">
+      <DependentUpon>C27_RegExpValidator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C27_RegExpValidator.aspx.designer.cs">
+      <DependentUpon>C27_RegExpValidator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C28_CustomVal.aspx.cs">
+      <DependentUpon>C28_CustomVal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C28_CustomVal.aspx.designer.cs">
+      <DependentUpon>C28_CustomVal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C29_ValSummary.aspx.cs">
+      <DependentUpon>C29_ValSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C29_ValSummary.aspx.designer.cs">
+      <DependentUpon>C29_ValSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C30_ValidationGrp.aspx.cs">
+      <DependentUpon>C30_ValidationGrp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C30_ValidationGrp.aspx.designer.cs">
+      <DependentUpon>C30_ValidationGrp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C31_ServerTransfer.aspx.cs">
+      <DependentUpon>C31_ServerTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C31_ServerTransfer.aspx.designer.cs">
+      <DependentUpon>C31_ServerTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C31_ServerTransfer_2.aspx.cs">
+      <DependentUpon>C31_ServerTransfer_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C31_ServerTransfer_2.aspx.designer.cs">
+      <DependentUpon>C31_ServerTransfer_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C32_QueryStr.aspx.cs">
+      <DependentUpon>C32_QueryStr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C32_QueryStr.aspx.designer.cs">
+      <DependentUpon>C32_QueryStr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C32_QueryStr2.aspx.cs">
+      <DependentUpon>C32_QueryStr2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C32_QueryStr2.aspx.designer.cs">
+      <DependentUpon>C32_QueryStr2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C33_CookieRead.aspx.cs">
+      <DependentUpon>C33_CookieRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C33_CookieRead.aspx.designer.cs">
+      <DependentUpon>C33_CookieRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C33_CookieRead2.aspx.cs">
+      <DependentUpon>C33_CookieRead2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C33_CookieRead2.aspx.designer.cs">
+      <DependentUpon>C33_CookieRead2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C33_Cookies.aspx.cs">
+      <DependentUpon>C33_Cookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C33_Cookies.aspx.designer.cs">
+      <DependentUpon>C33_Cookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C34_SessionRead.aspx.cs">
+      <DependentUpon>C34_SessionRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C34_SessionRead.aspx.designer.cs">
+      <DependentUpon>C34_SessionRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C34_SessionState.aspx.cs">
+      <DependentUpon>C34_SessionState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C34_SessionState.aspx.designer.cs">
+      <DependentUpon>C34_SessionState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C35_ApplicationState.aspx.cs">
+      <DependentUpon>C35_ApplicationState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C35_ApplicationState.aspx.designer.cs">
+      <DependentUpon>C35_ApplicationState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C35_ApplicationStateRead.aspx.cs">
+      <DependentUpon>C35_ApplicationStateRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C35_ApplicationStateRead.aspx.designer.cs">
+      <DependentUpon>C35_ApplicationStateRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C36_PageParent.Master.cs">
+      <DependentUpon>C36_PageParent.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C36_PageParent.Master.designer.cs">
+      <DependentUpon>C36_PageParent.Master</DependentUpon>
+    </Compile>
+    <Compile Include="C36_Site.Master.cs">
+      <DependentUpon>C36_Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C36_Site.Master.designer.cs">
+      <DependentUpon>C36_Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db01.aspx.cs">
+      <DependentUpon>Db01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db01.aspx.designer.cs">
+      <DependentUpon>Db01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db02.aspx.cs">
+      <DependentUpon>Db02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db02.aspx.designer.cs">
+      <DependentUpon>Db02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db03.aspx.cs">
+      <DependentUpon>Db03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db03.aspx.designer.cs">
+      <DependentUpon>Db03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db04.aspx.cs">
+      <DependentUpon>Db04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db04.aspx.designer.cs">
+      <DependentUpon>Db04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db05.aspx.cs">
+      <DependentUpon>Db05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db05.aspx.designer.cs">
+      <DependentUpon>Db05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db06-Add.aspx.cs">
+      <DependentUpon>Db06-Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db06-Add.aspx.designer.cs">
+      <DependentUpon>Db06-Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db06-Edit.aspx.cs">
+      <DependentUpon>Db06-Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db06-Edit.aspx.designer.cs">
+      <DependentUpon>Db06-Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db07.aspx.cs">
+      <DependentUpon>Db07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db07.aspx.designer.cs">
+      <DependentUpon>Db07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db08_Disconnected.aspx.cs">
+      <DependentUpon>Db08_Disconnected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db08_Disconnected.aspx.designer.cs">
+      <DependentUpon>Db08_Disconnected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db09_Disconnected.aspx.cs">
+      <DependentUpon>Db09_Disconnected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db09_Disconnected.aspx.designer.cs">
+      <DependentUpon>Db09_Disconnected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db10_Disconnected.aspx.cs">
+      <DependentUpon>Db10_Disconnected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db10_Disconnected.aspx.designer.cs">
+      <DependentUpon>Db10_Disconnected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db11.aspx.cs">
+      <DependentUpon>Db11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db11.aspx.designer.cs">
+      <DependentUpon>Db11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db11_CacheDS.aspx.cs">
+      <DependentUpon>Db11_CacheDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db11_CacheDS.aspx.designer.cs">
+      <DependentUpon>Db11_CacheDS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db12_SqlInjection.aspx.cs">
+      <DependentUpon>Db12_SqlInjection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db12_SqlInjection.aspx.designer.cs">
+      <DependentUpon>Db12_SqlInjection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Db13_ReadFromXML.aspx.cs">
+      <DependentUpon>Db13_ReadFromXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\Db13_ReadFromXML.aspx.designer.cs">
+      <DependentUpon>Db13_ReadFromXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\LoginForm\AddLogin.aspx.cs">
+      <DependentUpon>AddLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\LoginForm\AddLogin.aspx.designer.cs">
+      <DependentUpon>AddLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\LoginForm\Logged.aspx.cs">
+      <DependentUpon>Logged.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\LoginForm\Logged.aspx.designer.cs">
+      <DependentUpon>Logged.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\LoginForm\LoginForm.aspx.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\LoginForm\LoginForm.aspx.designer.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Models\Author.cs" />
+    <Compile Include="Database\Models\AuthorModel.cs" />
+    <Compile Include="Database\Models\Books.cs" />
+    <Compile Include="Database\Models\BooksDetail.cs" />
+    <Compile Include="Database\Models\Category.cs" />
+    <Compile Include="Database\Models\CategoryModel.cs" />
+    <Compile Include="Database\Models\Dashboard.cs" />
+    <Compile Include="Database\Models\ListCityModel.cs" />
+    <Compile Include="Database\Models\ListCityRepo.cs" />
+    <Compile Include="Database\Models\ListContinentModel.cs" />
+    <Compile Include="Database\Models\ListContinentRepo.cs" />
+    <Compile Include="Database\Models\ListCountryModel.cs" />
+    <Compile Include="Database\Models\ListCountryRepo.cs" />
+    <Compile Include="Database\Models\LoginUsers.cs" />
+    <Compile Include="Database\Models\LoginModel.cs" />
+    <Compile Include="Database\StoredProcedureDemo\LoginInsert.aspx.cs">
+      <DependentUpon>LoginInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\StoredProcedureDemo\LoginInsert.aspx.designer.cs">
+      <DependentUpon>LoginInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\StoredProcedureDemo\LoginView.aspx.cs">
+      <DependentUpon>LoginView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database\StoredProcedureDemo\LoginView.aspx.designer.cs">
+      <DependentUpon>LoginView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm12.aspx.cs">
+      <DependentUpon>WebForm12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm12.aspx.designer.cs">
+      <DependentUpon>WebForm12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm13.aspx.cs">
+      <DependentUpon>WebForm13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm13.aspx.designer.cs">
+      <DependentUpon>WebForm13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm14.aspx.cs">
+      <DependentUpon>WebForm14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm14.aspx.designer.cs">
+      <DependentUpon>WebForm14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm15.aspx.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm15.aspx.designer.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm16.aspx.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm16.aspx.designer.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm17.aspx.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm17.aspx.designer.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm18.aspx.cs">
+      <DependentUpon>WebForm18.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm18.aspx.designer.cs">
+      <DependentUpon>WebForm18.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm19.aspx.cs">
+      <DependentUpon>WebForm19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm19.aspx.designer.cs">
+      <DependentUpon>WebForm19.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm20.aspx.cs">
+      <DependentUpon>WebForm20.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm20.aspx.designer.cs">
+      <DependentUpon>WebForm20.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm21.aspx.cs">
+      <DependentUpon>WebForm21.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm21.aspx.designer.cs">
+      <DependentUpon>WebForm21.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm22.aspx.cs">
+      <DependentUpon>WebForm22.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm22.aspx.designer.cs">
+      <DependentUpon>WebForm22.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm23.aspx.cs">
+      <DependentUpon>WebForm23.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm23.aspx.designer.cs">
+      <DependentUpon>WebForm23.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm24.aspx.cs">
+      <DependentUpon>WebForm24.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm24.aspx.designer.cs">
+      <DependentUpon>WebForm24.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm25.aspx.cs">
+      <DependentUpon>WebForm25.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm25.aspx.designer.cs">
+      <DependentUpon>WebForm25.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm26.aspx.cs">
+      <DependentUpon>WebForm26.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm26.aspx.designer.cs">
+      <DependentUpon>WebForm26.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm27.aspx.cs">
+      <DependentUpon>WebForm27.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm27.aspx.designer.cs">
+      <DependentUpon>WebForm27.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm6.aspx.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm6.aspx.designer.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm7.aspx.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm7.aspx.designer.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm8.aspx.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm8.aspx.designer.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid\WebForm9.aspx.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataGrid\WebForm9.aspx.designer.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db\DbConnection.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm01\RegistrationForm.aspx.cs">
+      <DependentUpon>RegistrationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm01\RegistrationForm.aspx.designer.cs">
+      <DependentUpon>RegistrationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm02\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm02\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm02\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm02\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMap\MapPath\ServerMapPath.aspx.cs">
+      <DependentUpon>ServerMapPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerMap\MapPath\ServerMapPath.aspx.designer.cs">
+      <DependentUpon>ServerMapPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleCounter.aspx.cs">
+      <DependentUpon>SimpleCounter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimpleCounter.aspx.designer.cs">
+      <DependentUpon>SimpleCounter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C36_Content01.aspx.cs">
+      <DependentUpon>C36_Content01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C36_Content01.aspx.designer.cs">
+      <DependentUpon>C36_Content01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C36_Content02.aspx.cs">
+      <DependentUpon>C36_Content02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C36_Content02.aspx.designer.cs">
+      <DependentUpon>C36_Content02.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\StdPicture\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19987</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19987/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

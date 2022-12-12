@@ -1,0 +1,10 @@
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\bin\Debug\BasicCalculator.exe.config
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\bin\Debug\BasicCalculator.exe
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\bin\Debug\BasicCalculator.pdb
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.csprojResolveAssemblyReference.cache
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.Form1.resources
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.Properties.Resources.resources
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.csproj.GenerateResource.Cache
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.exe
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.pdb
+E:\Programming-Web-DB\DotNet\WinFormsDemo\BasicCalculator\obj\Debug\BasicCalculator.Form2.resources

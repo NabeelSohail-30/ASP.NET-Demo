@@ -1,0 +1,5 @@
+E:\Programming-Web-DB\DotNet\LMSProject\LMS\obj\Debug\LMS.csprojResolveAssemblyReference.cache
+E:\Programming-Web-DB\DotNet\LMSProject\LMS\bin\Debug\LMS.dll
+E:\Programming-Web-DB\DotNet\LMSProject\LMS\bin\Debug\LMS.pdb
+E:\Programming-Web-DB\DotNet\LMSProject\LMS\obj\Debug\LMS.dll
+E:\Programming-Web-DB\DotNet\LMSProject\LMS\obj\Debug\LMS.pdb
